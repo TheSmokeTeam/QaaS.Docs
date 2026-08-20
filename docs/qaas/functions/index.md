@@ -37,6 +37,10 @@ Each category page keeps the table of contents focused on short function names a
 - [Bootstrap](commands/bootstrap.md)
 - [Runner](commands/runner.md)
 
+### Transactions {: #transactions}
+
+- [Configuration](transactions/configuration.md)
+
 ### Extension Methods {: #extension-methods}
 
 - [Extension Methods](extension-methods.md)

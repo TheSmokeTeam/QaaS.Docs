@@ -33,6 +33,7 @@ Reporters:
   SaveLogs: True
   SaveSessionData: True
   SaveTemplate: True
+  SaveTerminalOutput: True
   ReportPortal:
     ApiKey: 'Global API key in QaaS.Configuration'
     Attributes: {}

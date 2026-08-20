@@ -32,6 +32,7 @@ The table below mirrors the schema used by the YAML scaffold page. Nested rows u
 | `Sessions[].Transactions[].TimeoutMs` | `integer or string` | &#10004 |  | the consumption timeout in milliseconds (timeout is the time to wait for a response after sending a request) |
 | `Sessions[].Transactions[].Iterations` | `integer or string` | &#10006 | 1 | How much iterations of the publishing action to execute |
 | `Sessions[].Transactions[].Loop` | `string or true/false` | &#10006 | False | Whether to publish in loop |
+| `Sessions[].Transactions[].SendEmptyRequest` | `string or true/false` | &#10006 | False | Whether to send one bodyless HTTP GET per iteration without reading from a data source |
 | `Sessions[].Transactions[].SleepTimeMs` | `integer or string` | &#10006 | 0 | The time to sleep in milliseconds in between iterations |
 | `Sessions[].Transactions[].Stage` | `integer or string` | &#10006 | 2 | The stage in which the Transaction runs at |
 | `Sessions[].Transactions[].DataSourceNames` | `list or string or null` | &#10006 |  | The name of the data sources to publish the data of in the order their data will be published |
