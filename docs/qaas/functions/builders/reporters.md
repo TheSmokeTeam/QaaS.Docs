@@ -23,6 +23,29 @@ Each entry uses the short function name as the table-of-contents label. Expand a
 
 The functions on this page are grouped by responsibility so related operations stay together.
 
+## Output selection {: #output-selection}
+
+### `ShouldSaveTerminalOutput` {: #shouldsaveterminaloutput}
+
+??? info "Source file, signature, and docstring"
+    **Member**
+    `ReporterBuilder.ShouldSaveTerminalOutput(bool shouldSaveTerminalOutput)`
+    
+    **Kind** `function`
+    
+    **Declaring Type** `ReporterBuilder`
+    
+    **Source File** `QaaS.Runner.Assertions/ConfigurationObjects/ReporterBuilder.cs`
+    
+    **Signature**
+    ```csharp
+    public ReporterBuilder ShouldSaveTerminalOutput(bool shouldSaveTerminalOutput)
+    ```
+    
+    **Docstring**
+    
+    Configures whether all terminal output from the QaaS execution is saved once per launch as an terminal.log attachment.
+
 ## Reporting and artifacts {: #reporting-and-artifacts}
 
 ### `ShouldSaveLogs` {: #shouldsavelogs}

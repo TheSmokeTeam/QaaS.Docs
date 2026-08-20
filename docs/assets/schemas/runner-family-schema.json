@@ -5535,6 +5535,15 @@
                     "type": "string"
                   }
                 },
+                "SendEmptyRequest": {
+                  "type": [
+                    "boolean",
+                    "string"
+                  ],
+                  "description": "Whether to send one bodyless HTTP GET per iteration without reading from a data source",
+                  "default": false,
+                  "pattern": "\\$\\{.*\\}"
+                },
                 "Iterations": {
                   "type": [
                     "integer",
@@ -13856,6 +13865,16 @@
             "string"
           ],
           "description": "Whether to save the session logs belonging to the assertions in the test report. If not set, each assertion will determine whether to save them.",
+          "pattern": "\\$\\{.*\\}"
+        },
+        "SaveTerminalOutput": {
+          "type": [
+            "boolean",
+            "null",
+            "string"
+          ],
+          "description": "Whether to capture all terminal output from the entire QaaS execution, including output not emitted through the context logger, and save it once per launch as a terminal.log attachment.",
+          "default": true,
           "pattern": "\\$\\{.*\\}"
         },
         "SaveAttachments": {

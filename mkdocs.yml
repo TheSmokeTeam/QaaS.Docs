@@ -188,6 +188,7 @@ nav:
                   - General: qaas/functions/builders/publishers-sections/general.md
               - Reporters:
                   - Overview: qaas/functions/builders/reporters.md
+                  - Output selection: qaas/functions/builders/reporters-sections/output-selection.md
                   - Reporting and artifacts: qaas/functions/builders/reporters-sections/reporting-and-artifacts.md
                   - General: qaas/functions/builders/reporters-sections/general.md
               - Sessions:
@@ -224,6 +225,8 @@ nav:
           - Commands:
               - Bootstrap: qaas/functions/commands/bootstrap.md
               - Runner: qaas/functions/commands/runner.md
+          - Transactions:
+              - Configuration: qaas/functions/transactions/configuration.md
           - Extension Methods:
               - Overview: qaas/functions/extension-methods.md
               - Context artifact: qaas/functions/extension-methods-sections/context-artifact.md

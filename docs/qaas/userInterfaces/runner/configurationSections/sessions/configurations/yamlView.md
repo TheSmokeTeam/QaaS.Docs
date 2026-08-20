@@ -425,6 +425,7 @@ Sessions:
         TimeoutMs: 0
         Iterations: 1
         Loop: False
+        SendEmptyRequest: False
         SleepTimeMs: 0
         Stage: 2
         DataSourceNames: []
