@@ -2673,6 +2673,42 @@
                       "minimum": 0.0,
                       "pattern": "\\$\\{.*\\}"
                     },
+                    "Durable": {
+                      "type": [
+                        "boolean",
+                        "string"
+                      ],
+                      "description": "Whether the queue is durable (survives broker restart)",
+                      "default": false,
+                      "pattern": "\\$\\{.*\\}"
+                    },
+                    "Exclusive": {
+                      "type": [
+                        "boolean",
+                        "string"
+                      ],
+                      "description": "Whether the queue is exclusive (used by only one connection and deleted when connection closes)",
+                      "default": false,
+                      "pattern": "\\$\\{.*\\}"
+                    },
+                    "AutoDelete": {
+                      "type": [
+                        "boolean",
+                        "string"
+                      ],
+                      "description": "Whether the queue is auto-deleted when all consumers unsubscribe",
+                      "default": false,
+                      "pattern": "\\$\\{.*\\}"
+                    },
+                    "Arguments": {
+                      "type": [
+                        "null",
+                        "object",
+                        "string"
+                      ],
+                      "description": "Custom queue declaration arguments / x-arguments (e.g. x-message-ttl, x-dead-letter-exchange, x-max-length, etc.)",
+                      "pattern": "\\$\\{.*\\}"
+                    },
                     "ExchangeName": {
                       "type": [
                         "null",
@@ -4317,6 +4353,42 @@
                       "default": 10,
                       "maximum": 2147483647.0,
                       "minimum": 0.0,
+                      "pattern": "\\$\\{.*\\}"
+                    },
+                    "Durable": {
+                      "type": [
+                        "boolean",
+                        "string"
+                      ],
+                      "description": "Whether the queue is durable (survives broker restart)",
+                      "default": false,
+                      "pattern": "\\$\\{.*\\}"
+                    },
+                    "Exclusive": {
+                      "type": [
+                        "boolean",
+                        "string"
+                      ],
+                      "description": "Whether the queue is exclusive (used by only one connection and deleted when connection closes)",
+                      "default": false,
+                      "pattern": "\\$\\{.*\\}"
+                    },
+                    "AutoDelete": {
+                      "type": [
+                        "boolean",
+                        "string"
+                      ],
+                      "description": "Whether the queue is auto-deleted when all consumers unsubscribe",
+                      "default": false,
+                      "pattern": "\\$\\{.*\\}"
+                    },
+                    "Arguments": {
+                      "type": [
+                        "null",
+                        "object",
+                        "string"
+                      ],
+                      "description": "Custom queue declaration arguments / x-arguments (e.g. x-message-ttl, x-dead-letter-exchange, x-max-length, etc.)",
                       "pattern": "\\$\\{.*\\}"
                     },
                     "ExchangeName": {

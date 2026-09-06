@@ -158,9 +158,13 @@ Sessions:
           ColumnsToIgnore: []
         RabbitMq:
           Host: 'value'
+          Arguments: {}
+          AutoDelete: False
           ContinuationTimeoutSeconds: 5
           CreatedQueueTimeToExpireMs: 300000
+          Durable: False
           ExchangeName: 'value'
+          Exclusive: False
           HandshakeContinuationTimeoutSeconds: 10
           Password: 'admin'
           Port: 5672
@@ -343,13 +347,17 @@ Sessions:
         RabbitMq:
           Host: 'value'
           AppId: 'value'
+          Arguments: {}
+          AutoDelete: False
           ClusterId: 'value'
           ContentEncoding: 'value'
           ContentType: 'value'
           ContinuationTimeoutSeconds: 5
           CorrelationId: 'value'
           DeliveryMode: 1
+          Durable: False
           ExchangeName: 'value'
+          Exclusive: False
           Expiration: 'value'
           HandshakeContinuationTimeoutSeconds: 10
           Headers: {}

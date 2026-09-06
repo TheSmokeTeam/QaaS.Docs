@@ -17,7 +17,7 @@ summary: "Executes a YAML file containing a sequential list of Runner commands."
 
 # execute
 
-> TL;DR — Executes a yaml execution file that contains a list of other commands to execute in a sequential order. The flags of all commands in the execution file that can also be given in the execute command ('s', 'e', 'l', 'g') will be ignored.
+> TL;DR — Executes a yaml execution file that contains a list of other commands to execute in a sequential order. The flags of all commands in the execution file that can also be given in the execute command ('s', 'o', 'e', 'l', 'g') will be ignored.
 
 ## Invocation {: #invocation}
 
@@ -49,6 +49,7 @@ dotnet run <dotnet-parameters> -- execute <executable-file> [flags]
 | Logging | `-g`, `--logger-configuration-file` | Yes | No |  | `string` | Path to a logger's configuration file, will override the default logger's configuration. Its level can be overridden by the logger-level flag. |
 | Logging | `-l`, `--logger-level` | Yes | No |  | `LogEventLevel (optional)` | The logger's level, overrides both the default logger's level (Information) and the level of any logger's configuration given.<br />All available options (not case sensitive) are: Verbose, Debug,<br />Information, Warning, Error, Fatal. |
 | Runtime | `--no-process-exit` | No | No | False | `bool` | When this flag is used the runner will not terminate the current process after it completes. Useful when embedding QaaS.Runner and orchestrating multiple runners in a single host process. |
+| General | `-o`, `--open-reportportal` | No | No | False | `bool` | Opens each successfully published ReportPortal report in the default browser.<br />ReportPortal reporting must be enabled in the configuration.<br />When commands in the execution file use this flag it has no effect; this execute-level flag controls opening. |
 | Logging | `--send-logs` | Yes | No | False | `bool` | Whether to send logs to the configured Elasticsearch sink. |
 | Results | `-s`, `--serve-results` | No | No |  | `string` | Serves Allure output after executing all commands.<br />If the flag is provided without a value it serves the default raw results folder 'allure-results'.<br />Provide a folder name such as 'allure-report' to open a generated report directory, which is useful for Allure 3 flows.<br />When any of the commands written in the executable configuration file use this flag it will not do anything, this is the deciding flag.<br />Uses a locally installed allure CLI tool, if allure CLI is not installed and added to path the serve will fail. |
 
@@ -125,6 +126,12 @@ Usage:
                                        Uses a locally installed allure CLI tool, if allure CLI is not installed and
                                        added to path the serve will fail.
 
+
+  -o, --open-reportportal              (Default: false)
+                                       Opens each successfully published ReportPortal report in the default browser.
+                                       ReportPortal reporting must be enabled in the configuration.
+                                       When commands in the execution file use this flag it has no effect; this
+                                       execute-level flag controls opening.
 
   -e, --empty-allure-directory         (Default: false) If flag is enabled will automatically empty the allure results
                                        directory before running.
