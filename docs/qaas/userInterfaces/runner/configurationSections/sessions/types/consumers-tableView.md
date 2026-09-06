@@ -138,9 +138,13 @@ The table below mirrors the schema used by the YAML scaffold page. Nested rows u
 | `Sessions[].Consumers[].PostgreSqlTable.ColumnsToIgnore[]` | `string` | &#10006 |  |  |
 | `Sessions[].Consumers[].RabbitMq` | `object or string` | &#10006 |  | Consumes messages from a rabbitmq |
 | `Sessions[].Consumers[].RabbitMq.Host` | `string` | &#10004 |  | Rabbitmq hostname |
+| `Sessions[].Consumers[].RabbitMq.Arguments` | `object or string or null` | &#10006 |  | Custom queue declaration arguments / x-arguments (e.g. x-message-ttl, x-dead-letter-exchange, x-max-length, etc.) |
+| `Sessions[].Consumers[].RabbitMq.AutoDelete` | `string or true/false` | &#10006 | False | Whether the queue is auto-deleted when all consumers unsubscribe |
 | `Sessions[].Consumers[].RabbitMq.ContinuationTimeoutSeconds` | `integer or string` | &#10006 | 5 | Amount of time protocol operations (e.g. queue.declare) are allowed to take before timing out in seconds |
 | `Sessions[].Consumers[].RabbitMq.CreatedQueueTimeToExpireMs` | `number or string` | &#10006 | 300000 | The amount of milliseconds before the created queue is deleted when it has no readrs |
+| `Sessions[].Consumers[].RabbitMq.Durable` | `string or true/false` | &#10006 | False | Whether the queue is durable (survives broker restart) |
 | `Sessions[].Consumers[].RabbitMq.ExchangeName` | `string or null` | &#10006 |  | Name of the exchange to read messages fromCannot be set if configured QueueName to read from. |
+| `Sessions[].Consumers[].RabbitMq.Exclusive` | `string or true/false` | &#10006 | False | Whether the queue is exclusive (used by only one connection and deleted when connection closes) |
 | `Sessions[].Consumers[].RabbitMq.HandshakeContinuationTimeoutSeconds` | `integer or string` | &#10006 | 10 | Amount of time protocol handshake operations are allowed to take before timing out in seconds |
 | `Sessions[].Consumers[].RabbitMq.Password` | `string` | &#10006 | admin | Rabbitmq password |
 | `Sessions[].Consumers[].RabbitMq.Port` | `integer or string` | &#10006 | 5672 | Rabbitmq Amqp port |

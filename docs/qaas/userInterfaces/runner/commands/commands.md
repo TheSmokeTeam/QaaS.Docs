@@ -33,7 +33,7 @@ dotnet run <dotnet-parameters> -- <command> [command-values] [command-flags]
 | ------- | ----------- | -------- |
 | [`act`](./act.md) | Run a qaas test without the assertions and save all sessionData. | Execute only the session phase and persist SessionData for later inspection. |
 | [`assert`](./assert.md) | Run a qaas test with only the assertions on already existing sessionData. | Evaluate only the assertion phase against existing SessionData. |
-| [`execute`](./execute.md) | Executes a yaml execution file that contains a list of other commands to execute in a sequential order. The flags of all commands in the execution file that can also be given in the execute command ('s', 'e', 'l', 'g') will be ignored. | Run a YAML-defined sequence of Runner commands. |
+| [`execute`](./execute.md) | Executes a yaml execution file that contains a list of other commands to execute in a sequential order. The flags of all commands in the execution file that can also be given in the execute command ('s', 'o', 'e', 'l', 'g') will be ignored. | Run a YAML-defined sequence of Runner commands. |
 | [`run`](./run.md) | Run a qaas test according to the given configurations. | Run the full QaaS flow: sessions, assertions, reporting, and optional Allure serving. |
 | [`template`](./template.md) | Template a qaas configuration file to see how it looks after being loaded, will template what it can even if the configuration file is invalid. | Render the fully resolved Runner configuration without executing it. |
 
@@ -87,8 +87,8 @@ Usage:
               if the configuration file is invalid.
 
   execute     Executes a yaml execution file that contains a list of other commands to execute in a sequential order.
-              The flags of all commands in the execution file that can also be given in the execute command ('s', 'e',
-              'l', 'g') will be ignored.
+              The flags of all commands in the execution file that can also be given in the execute command ('s', 'o',
+              'e', 'l', 'g') will be ignored.
 
   help        Display more information on a specific command.
 
